@@ -1,5 +1,5 @@
 # =============================================================================
-# 程序名: three_three_sou_zhen_2.py
+# 程序名: three_three_sou_zhen_3.py
 # 功能: 批量下载与关键字匹配的视频
 # 作者: afeng
 # 日期: 2024-10-22
@@ -20,7 +20,12 @@ ts = str(int(time.time() * 1000) - 9999)
 page = 3
 
 e = f'_platform=web,_ts={ts},_versioin=0.2.5,keyword={keyword},limit=12,page={page},'
-
+jscode = None
+with open('搜帧/three_three_sou_zhen_3.js', 'r', encoding='utf8') as f:
+    jscode = f.read()
+myjs = execjs.compile(jscode)
+result = myjs.call('getXSignature', e)
+print(result)
 
 # =============================================================================
 

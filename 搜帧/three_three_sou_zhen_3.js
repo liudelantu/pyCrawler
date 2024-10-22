@@ -221,5 +221,5 @@ function getXSignature(data) {
 }
 
 // 调试
-let data = '_platform=web,_ts=1729602460221,_versioin=0.2.5,keyword=火车呼啸而过,limit=12,page=16,';
-console.log(getXSignature(data));
+// let data = '_platform=web,_ts=1729602460221,_versioin=0.2.5,keyword=火车呼啸而过,limit=12,page=16,';
+// console.log(getXSignature(data));
