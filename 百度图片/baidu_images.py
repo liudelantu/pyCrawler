@@ -29,9 +29,7 @@ headers = {
 
 # =============================================================================
 
-# 图片的保存位置
-
-# 获取当前程序所在的目录
+# 创建 图片的存储位置
 cur_dir = os.path.dirname(os.path.abspath(__file__))
 
 images_dir = os.path.join(cur_dir, 'images')
@@ -39,22 +37,15 @@ keyword_dir = os.path.join(images_dir, keyword)
 
 if not os.path.exists(images_dir):
     os.makedirs(images_dir)
-    print(f"目录 '{images_dir}' 创建成功。")
-
 if not os.path.exists(keyword_dir):
     os.makedirs(keyword_dir)
-    print(f"目录 '{keyword_dir}' 创建成功。")
-else:
-    print(f"目录 '{keyword_dir}' 已存在。")
-
 
 # =============================================================================
 
-# 限定下载10页图片
 for page in range(int(pages)):
     params = {
         'tn' : 'resultjson_com',
-        'logid' : '8777705988266505980',  # ?
+        'logid' : '8777705988266505980',  
         'ipn' : 'rj',
         'ct' : '201326592',
         'is' : '',
