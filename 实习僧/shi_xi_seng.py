@@ -1,6 +1,6 @@
 # =============================================================================
 # 程序名: shi_xi_seng.py
-# 功能: 获取 实习僧求职网站的信息
+# 功能: 获取 实习僧 网站的信息
 # 作者: afeng
 # 日期: 2024-10-23
 # 描述：
@@ -9,7 +9,6 @@
 # =============================================================================
 
 from playwright.sync_api import sync_playwright
-import asyncio
 
 with sync_playwright() as p:
     browser = p.chromium.launch(headless=False, executable_path = r'C:\Program Files\Google\Chrome\Application\chrome.exe')
@@ -32,6 +31,8 @@ with sync_playwright() as p:
         print(f'正在获取{i+1}页的数据.....')
         new_page.wait_for_selector('a.title.ellipsis.font')  # 等待页面上的所有a.title.ellipsis.font完全加载
         job_des = new_page.locator('a.title.ellipsis.font')
+
+        # 当前页的岗位数量
         job_cnt = job_des.count()
 
         for i in range(job_cnt):
