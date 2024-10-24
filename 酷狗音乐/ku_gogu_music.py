@@ -20,7 +20,7 @@ headers = {
     'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
     'referer' : 'https://www.kugou.com/'
 }
-keyword = '周杰伦'
+keyword = '张杰'
 page = '1'
 
 # =============================================================================
