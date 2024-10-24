@@ -2,7 +2,7 @@
 # 程序名: shi_xi_seng.py
 # 功能: 获取 实习僧 网站的信息
 # 作者: afeng
-# 日期: 2024-10-23
+# 日期: 2024-10-15
 # 描述：
 #
 # 例子：
@@ -16,6 +16,7 @@ with sync_playwright() as p:
 
     page = context.new_page()
     page.goto("https://www.shixiseng.com/")
+    page.locator('img.closeOpen').click()
     page.locator('input.nonal').fill('python')
     with context.expect_page() as new_page_info:
         page.locator('input.form--button').click()

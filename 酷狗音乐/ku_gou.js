@@ -261,4 +261,4 @@ var s = [
 //console.log(GetMid())
 //console.log(signatureParam(u, '1014'))
 //console.log(getFormData('2024-10-23', '2024-10-23 09:40:50', GetMid()))
-console.log(calcMD5(s))
+//console.log(calcMD5(s))
